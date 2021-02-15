@@ -57,6 +57,17 @@ dependencies {
     kapt "com.google.dagger:dagger-android-processor:$dagger_version"
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
 
+    // Mvi
+    implementation "com.github.badoo.mvicore:mvicore:$mvicore_version"
+    implementation "com.github.badoo.mvicore:mvicore-android:$mvicore_version"
+    implementation "com.github.badoo.mvicore:mvicore-diff:$mvicore_version"
+    implementation "com.github.badoo.mvicore:binder:$mvicore_version"
+
+    // Rx
+    implementation "io.reactivex.rxjava2:rxjava"
+    implementation "io.reactivex.rxjava2:rxkotlin"
+    implementation "io.reactivex.rxjava2:rxandroid"
+
     // Test
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

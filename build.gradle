@@ -1,9 +1,10 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     ext.dagger_version = "2.32"
-    ext.retrofit2_version = "2.6.0"
+    ext.retrofit2_version = "2.7.0"
     ext.cicerone_version = "6.6"
     ext.kotlin_version = "1.4.30"
+    ext.mvicore_version = "1.2.6"
 
     repositories {
         google()
@@ -22,6 +23,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url 'https://jitpack.io' }
     }
 }
 
