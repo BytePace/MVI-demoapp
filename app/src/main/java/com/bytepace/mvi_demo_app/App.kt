@@ -1,7 +1,7 @@
 package com.bytepace.mvi_demo_app
 
 import android.app.Application
-import com.bytepace.mvi_demo_app.di.AppComponent
+import com.bytepace.mvi_demo_app.di.components.AppComponent
 import com.bytepace.mvi_demo_app.di.DaggerAppComponent
 
 class App : Application() {

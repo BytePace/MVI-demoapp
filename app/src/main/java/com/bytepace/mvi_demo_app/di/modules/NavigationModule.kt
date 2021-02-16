@@ -1,5 +1,6 @@
 package com.bytepace.mvi_demo_app.di.modules
 
+import com.bytepace.mvi_demo_app.di.scope.ActivityScope
 import com.github.terrakok.cicerone.Cicerone
 import com.github.terrakok.cicerone.NavigatorHolder
 import com.github.terrakok.cicerone.Router
@@ -10,20 +11,20 @@ import javax.inject.Singleton
 @Module
 class NavigationModule {
     @Provides
-    @Singleton
-    fun provideCicerone() : Cicerone<Router> {
+    @ActivityScope
+    fun cicerone(): Cicerone<Router> {
         return Cicerone.create()
     }
 
     @Provides
-    @Singleton
-    fun provideCiceroneRouter(cicerone: Cicerone<Router>) : Router {
+    @ActivityScope
+    fun ciceroneRouter(cicerone: Cicerone<Router>): Router {
         return cicerone.router
     }
 
     @Provides
-    @Singleton
-    fun provideCiceroneHolder(cicerone: Cicerone<Router>) : NavigatorHolder {
+    @ActivityScope
+    fun ciceroneHolder(cicerone: Cicerone<Router>): NavigatorHolder {
         return cicerone.getNavigatorHolder()
     }
 }

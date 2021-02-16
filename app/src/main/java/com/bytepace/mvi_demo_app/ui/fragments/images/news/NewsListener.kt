@@ -1,4 +1,4 @@
-package com.bytepace.mvi_demo_app.ui.fragments.images
+package com.bytepace.mvi_demo_app.ui.fragments.images.news
 
 import android.content.Context
 import android.widget.Toast
