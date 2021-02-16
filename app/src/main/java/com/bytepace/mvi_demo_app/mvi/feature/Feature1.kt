@@ -1,5 +1,6 @@
 package com.bytepace.mvi_demo_app.mvi.feature
 
+import android.util.Log
 import com.badoo.mvicore.element.Reducer
 import com.badoo.mvicore.feature.ReducerFeature
 
@@ -18,9 +19,12 @@ class Feature1 : ReducerFeature<Feature1.Wish, Feature1.State, Nothing>(
 
     class ReducerImpl : Reducer<State, Wish> {
         override fun invoke(state: State, wish: Wish): State = when (wish) {
-            Wish.IncrementCounter -> state.copy(
-                counter = state.counter + 1
-            )
+            Wish.IncrementCounter -> {
+                Log.d("###REDUCER_INCR_COUNTER", state.counter.toString())
+                state.copy(
+                    counter = state.counter + 1
+                )
+            }
         }
     }
 }

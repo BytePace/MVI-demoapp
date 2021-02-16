@@ -24,5 +24,4 @@ class MainActivity : AppCompatActivity(R.layout.main_activity) {
         navigatorHolder.setNavigator(Navigator(this, R.id.container))
         router.replaceScreen(Screens.Main())
     }
-
 }
