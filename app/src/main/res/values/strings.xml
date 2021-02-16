@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MVI-Demo-app</string>
+    <string name="save_image_button">Save Image</string>
+    <string name="next_image_button">Next Image</string>
 </resources>

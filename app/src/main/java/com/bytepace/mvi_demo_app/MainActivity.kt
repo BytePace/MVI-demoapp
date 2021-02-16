@@ -22,6 +22,6 @@ class MainActivity : AppCompatActivity(R.layout.main_activity) {
         super.onCreate(savedInstanceState)
         app.appComponent.inject(this)
         navigatorHolder.setNavigator(Navigator(this, R.id.container))
-        router.replaceScreen(Screens.Main())
+        router.replaceScreen(Screens.firstScreen())
     }
 }
